@@ -1,11 +1,24 @@
 import React from 'react'
-
+import Slider from "react-slick";
+import {SamplePrevArrow, SampleNextArrow} from './Helper/helper'
 function Section1() {
+  const data = ['p01.jpg','p02.jpg','p03.jpg','p04.jpg','p05.jpg','p06.jpg']
+  const settings = {
+    dots: false,
+    lazyLoad: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />
+  };
   return (
-    <div className='h:100vh rel bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed'
+    <div className='h:100vh rel bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed bg:scroll@lg'
     style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section1/section1_bg.png'})`}}
     >
-    <div className='flex flex:col jc:center w:80% mx:auto pt:30% rel z:1'>
+    <div className='flex flex:col jc:center w:80% mx:auto pt:30% rel z:1 pt:10%@lg w:20%@lg'>
       <div className='w:3/4 center mb:20' 
         data-aos="fade" data-aos-duration="1500" >
           <img src={process.env.PUBLIC_URL+'/images/section1/title.png'} alt="" className='w:full'/> 
@@ -16,11 +29,21 @@ function Section1() {
       </div>
 
     </div>
-    <div className='w:full center mb:20 ' 
-      data-aos="fade" data-aos-duration="1500" >
-        <img src={process.env.PUBLIC_URL+'/images/test.png'} alt="" className='w:full'/> 
+    <div className='w:full center mb:20  w:1/2@lg'>
+    
+          <Slider {...settings} >
+            {
+              data.map((item,index)=>{
+                return(
+                  <div key={index} className='rel w:full '>
+                      <img src={process.env.PUBLIC_URL +'/images/section1/'+item} alt="" className='w:full'/>
+                  </div>
+                )
+              })
+            }
+          </Slider>
     </div>
-    <div className='flex flex:col jc:center w:60% mx:auto pt:10% rel z:1 f:white'>
+    <div className='flex flex:col jc:center w:60% mx:auto pt:10% rel z:1 f:white hidden@lg'>
       <div className='w:3/4 center mb:20' 
         data-aos="fade" data-aos-duration="1500" >
           <img src={process.env.PUBLIC_URL+'/images/section1/intro_title.png'} alt="" className='w:full'/> 
