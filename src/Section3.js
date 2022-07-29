@@ -15,7 +15,7 @@ function Section3() {
     nextArrow: <SampleNextArrow />
   };
   return (
-    <div className='h:100vh bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed bg:scroll@lg'
+    <div className='min-h:100vh bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed bg:scroll@lg'
     style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section3/section3_bg.png'})`}}
     >
       <div className=' flex flex:col'>
@@ -41,7 +41,7 @@ function Section3() {
             </div>
           </div>
           <div className='flex flex:col jc:center w:60% mx:auto pt:5% rel z:1 f:white w:1/2@lg pt:1%@lg '>
-            <div className='by:2 py:20 f:14 lh:1.4 t:justify' data-aos="fade" data-aos-duration="1500">
+            <div className='by:2 py:20 f:16 lh:1.4 t:justify' data-aos="fade" data-aos-duration="1500">
               高鐵第一排、機捷A18站、大竹交流道，輕鬆穿梭國際門戶，從容佈局全世界，便捷交通，讓您盡享贏家快意人生
 
             </div>

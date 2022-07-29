@@ -32,7 +32,7 @@ function Section6() {
     })
   };
   return (
-    <div className='h:100vh bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed'
+    <div className='min-h:100vh bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed'
     style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section6/section6_bg.png'})`}}
     >
       {formStatus && <div className={'fixed w:full  z:40 inset:0 transition '} onClick={()=>setFormStatus(false)}>
@@ -72,25 +72,25 @@ function Section6() {
       <form onSubmit={handleSubmit(onSubmit)} className="w:70% mx:auto my:20 w:40%@lg">
         <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>姓名/</label>
-          <input type="text" className="block  bg:white r:5  w:full@lg
+          <input type="text" className="block  bg:white ml:3 r:5  w:full@lg
                px:6 py:8 " placeholder="姓名"    {...register("name", { required: true})}/>
         </div>
         <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>電話/</label>
-          <input type="text" className="block  bg:white r:5 w:full@lg   
+          <input type="text" className="block  bg:white ml:3 r:5 w:full@lg   
                px:6 py:8 " placeholder="電話"    {...register("tel", { required: true})}/>
         </div>
         <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>居住地/</label>
-          <input type="text" className="block  bg:white r:5  w:full@lg 
+          <input type="text" className="block  bg:white ml:3 r:5  w:full@lg 
                px:6 py:8 " placeholder="居住地"    {...register("place", { required: true})}/>
         </div>
         <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>預約訊息/</label>
-          <input type="text" className="block  bg:white r:5  w:full@lg 
+          <input type="text" className="block  bg:white ml:3 r:5  w:full@lg 
                px:6 py:8 " placeholder="預約訊息"    {...register("msg")}/>
         </div>
-        <button className='bg:#F8C785 px:8 py:6 r:5 f:bold w:full t:14 f:#3A270D' type='submit'>送出表單</button>
+        <button className='bg:#F8C785 px:8 py:12 r:5 f:bold w:full t:14 f:#3A270D' type='submit'>送出表單</button>
       </form>
 
     </div>
