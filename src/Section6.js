@@ -43,23 +43,23 @@ function Section6() {
       
       </div>}
       <div className='flex flex:col jc:center w:80% mx:auto pt:25% rel z:1 w:1/2@lg pt:5%@lg'>
-        <div className='w:full center mb:20 w:1/2@lg mb:10@lg' 
+        <div className='w:full center mb:20 w:1/2@lg mb:10@lg w:60%@sm' 
           data-aos="fade" data-aos-duration="1500" >
             <img src={process.env.PUBLIC_URL+'/images/section6/title.png'} alt="" className='w:full'/> 
         </div>
       </div>
-      <div className='flex gap:10 jc:center w:80% mx:auto mt:60'>
-        <a href="https://www.facebook.com/profile.php?id=100083270795919" target="_blank" rel="noreferrer">
+      <div className='flex gap:10 jc:center w:80% mx:auto mt:60 w:60%@sm'>
+        <a href="https://www.facebook.com/profile.php?id=100083270795919" target="_blank" rel="noreferrer" title="link-fb" className='link-fb'>
           <img src={process.env.PUBLIC_URL+'/images/section6/fb.png'} alt="" className='w:full'/> 
         </a>
-        <a href="tel:033811288" target="_blank" rel="noreferrer">
-          <img src={process.env.PUBLIC_URL+'/images/section6/phone.png'} alt="" className='w:full'/> 
+        <a href="tel:033811288" target="_blank" rel="noreferrer" title="link-tel" className='link-tel'>
+          <img src={process.env.PUBLIC_URL+'/images/section6/phone.png'} alt="" className='w:full' /> 
         </a>
-        <a href="https://goo.gl/maps/H2V5dntwA5aYd31V8" target="_blank" rel="noreferrer">
+        <a href="https://goo.gl/maps/H2V5dntwA5aYd31V8" target="_blank" rel="noreferrer" title="link-map" className='link-map'>
           <img src={process.env.PUBLIC_URL+'/images/section6/map.png'} alt="" className='w:full'/> 
         </a>
       </div>
-      <div className='w:80% mx:auto mt:20 w:1/2@lg'>
+      <div className='w:80% mx:auto mt:20 w:1/2@lg w:60%@sm'>
         <div className='w:1/2@lg center'>
           <img src={process.env.PUBLIC_URL+'/images/section6/form_title.png'} alt="" className='w:full'/> 
         </div>
@@ -69,25 +69,25 @@ function Section6() {
         
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="w:70% mx:auto my:20 w:40%@lg">
-        <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
+      <form onSubmit={handleSubmit(onSubmit)} className="w:70% mx:auto my:20 w:40%@lg w:40%@sm">
+        <div className='w:full flex ai:center my:10 jc:end flex:col@sm ai:start@sm '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>姓名/</label>
-          <input type="text" className="block  bg:white ml:3 r:5  w:full@lg
+          <input type="text" className="block  bg:white ml:3 r:5  w:full@sm
                px:6 py:8 " placeholder="姓名"    {...register("name", { required: true})}/>
         </div>
-        <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
+        <div className='w:full flex ai:center my:10 jc:end flex:col@sm ai:start@sm '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>電話/</label>
-          <input type="text" className="block  bg:white ml:3 r:5 w:full@lg   
+          <input type="text" className="block  bg:white ml:3 r:5 w:full@sm   
                px:6 py:8 " placeholder="電話"    {...register("tel", { required: true})}/>
         </div>
-        <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
+        <div className='w:full flex ai:center my:10 jc:end flex:col@sm ai:start@sm '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>居住地/</label>
-          <input type="text" className="block  bg:white ml:3 r:5  w:full@lg 
+          <input type="text" className="block  bg:white ml:3 r:5  w:full@sm
                px:6 py:8 " placeholder="居住地"    {...register("place", { required: true})}/>
         </div>
-        <div className='w:full flex ai:center my:10 jc:end flex:col@lg ai:start@lg '>
+        <div className='w:full flex ai:center my:10 jc:end flex:col@sm ai:start@sm '>
           <label htmlFor="" className='f:#F8C785 f:bold mr:5'>預約訊息/</label>
-          <input type="text" className="block  bg:white ml:3 r:5  w:full@lg 
+          <input type="text" className="block  bg:white ml:3 r:5  w:full@sm
                px:6 py:8 " placeholder="預約訊息"    {...register("msg")}/>
         </div>
         <button className='bg:#F8C785 px:8 py:12 r:5 f:bold w:full t:14 f:#3A270D' type='submit'>送出表單</button>

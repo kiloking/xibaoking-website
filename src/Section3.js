@@ -35,13 +35,13 @@ function Section3() {
         </div>
         <div className='o:first@lg'>
           <div className='flex flex:col jc:center w:80% mx:auto pt:5% rel z:1 w:1/2@lg '>
-            <div className='w:full center mb:20 w:1/2@lg mb:10@lg' 
+            <div className='w:full center mb:20 w:1/2@lg mb:10@lg w:60%@sm' 
               data-aos="fade" data-aos-duration="1500" >
               <img src={process.env.PUBLIC_URL+'/images/section3/title.png'} alt="" className='w:full'/> 
             </div>
           </div>
-          <div className='flex flex:col jc:center w:60% mx:auto pt:5% rel z:1 f:white w:1/2@lg pt:1%@lg '>
-            <div className='by:2 py:20 f:16 lh:1.4 t:justify' data-aos="fade" data-aos-duration="1500">
+          <div className='flex flex:col jc:center w:60% mx:auto pt:5% rel z:1 f:white w:1/2@lg pt:1%@lg pb:5%@sm pb:0@lg '>
+            <div className='by:2 py:20 f:16 lh:1.4 t:justify f:1.5rem@sm' data-aos="fade" data-aos-duration="1500">
               高鐵第一排、機捷A18站、大竹交流道，輕鬆穿梭國際門戶，從容佈局全世界，便捷交通，讓您盡享贏家快意人生
 
             </div>
