@@ -36,7 +36,7 @@ function Section2() {
         </div>
 
       </div>
-      <div className='w:80% center pt:10% pb:30% w:1/2@lg pt:3%@lg' 
+      <div className='w:80% center pt:10% pb:30% w:1/2@lg pt:3%@lg rel' 
         data-aos="fade" data-aos-duration="1500" >
           <Slider {...settings} >
             {

@@ -16,7 +16,6 @@ function App() {
         
       });
   }, 100);
-    AOS.refresh();
   }, []);
   return (
     <div className="App">

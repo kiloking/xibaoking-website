@@ -53,8 +53,8 @@ function Section1() {
             }
           </Slider>
     </div>
-    <div className='flex flex:col jc:center w:60% mx:auto pt:10% rel z:1 f:white pb:10%  hidden@lg '>
-      <div className='w:full center mb:20 w:50%@sm' 
+    <div className='flex flex:col jc:center w:60% mx:auto pt:10% rel z:1 f:white pb:10%  w:1/2@lg'>
+      <div className='w:full center mb:20 w:50%@sm w:20%@lg' 
         data-aos="fade" data-aos-duration="1500" >
           <img src={process.env.PUBLIC_URL+'/images/section1/intro_title.png'} alt="" className='w:full'/> 
       </div>

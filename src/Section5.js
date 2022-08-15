@@ -32,7 +32,7 @@ function Section5() {
             <img src={process.env.PUBLIC_URL+'/images/section5/title.png'} alt="" className='w:full'/> 
         </div>
       </div>
-      <div className='w:11/12 mx:auto f:white t:center f:14 f:14@lg f:20@sm' data-aos="fade" data-aos-duration="1500">
+      <div className='w:11/12 mx:auto f:white t:center f:14 f:14@lg f:20@sm rel' data-aos="fade" data-aos-duration="1500">
         <div className='w:1 h:35 bg:#C79F62 mx:auto mb:15'></div>
         <div className='flex flex:col flex:row@lg gap:8@lg'>
           <div className='mb:15 mb:3%@lg b:1@lg b:#C79F62 py:25@lg px:15@lg  '>
@@ -59,7 +59,7 @@ function Section5() {
 
 
       </div>
-      <div className='w:80% center mb:0 pt:15% pb:20% w:1/2@lg pt:3%@lg' 
+      <div className='w:80% center mb:0 pt:15% pb:20% w:1/2@lg pt:3%@lg rel' 
         data-aos="fade" data-aos-duration="1500" >
           <Slider {...settings} >
             {

@@ -26,7 +26,7 @@ function Section3() {
         style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section3/section3_bg_pc.jpg'})`}}
         data-aos="fade" data-aos-duration="1500"
       ></div>
-      <div className=' flex flex:col'>
+      <div className=' flex flex:col rel'>
         <div className='w:80% center mb:20 pt:35% w:1/2@lg pt:5%@lg o:last@lg ' 
           data-aos="fade" data-aos-duration="1500" >
             <Slider {...settings} >
