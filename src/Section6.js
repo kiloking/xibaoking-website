@@ -32,9 +32,18 @@ function Section6() {
     })
   };
   return (
-    <div className='min-h:100vh bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed'
-    style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section6/section6_bg.png'})`}}
-    >
+    <div className='min-h:100vh bg:#110807 rel'>
+      <div
+        className='inset:0 abs  bg:center bg:no-repeat bg:cover  bg:scroll@lg z:0  hidden@lg'
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section6/section6_bg.png'})`}}
+        data-aos="fade" data-aos-duration="1500"
+      ></div>
+      <div
+        className='inset:0 abs  bg:center bg:no-repeat bg:cover bg:scroll@lg z:0  hidden block@lg'
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section6/section6_bg_pc.jpg'})`}}
+        data-aos="fade" data-aos-duration="1500"
+      ></div>
+
       {formStatus && <div className={'fixed w:full  z:40 inset:0 transition '} onClick={()=>setFormStatus(false)}>
         <div className={`w:3/5 mx:auto  r:10 p:10 bg:#000000b4 f:white f:12 top:15% rel transition duration:300 delay:1000   ${formStatus ? " opacity:1 blur(0) " : "opacity:0 blur(0.8) "}`}>
         表單已送出。我們將盡快電話聯絡您，詢問並安排您方便的賞屋時間。如有任何問題，歡迎直接聯繫我們，謝謝！
@@ -43,8 +52,7 @@ function Section6() {
       
       </div>}
       <div className='flex flex:col jc:center w:80% mx:auto pt:25% rel z:1 w:1/2@lg pt:5%@lg'>
-        <div className='w:full center mb:20 w:1/2@lg mb:10@lg w:60%@sm' 
-          data-aos="fade" data-aos-duration="1500" >
+        <div className='w:full center mb:20 w:1/2@lg mb:10@lg w:60%@sm'>
             <img src={process.env.PUBLIC_URL+'/images/section6/title.png'} alt="" className='w:full'/> 
         </div>
       </div>

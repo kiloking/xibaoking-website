@@ -15,9 +15,17 @@ function Section2() {
     nextArrow: <SampleNextArrow />
   };
   return (
-    <div className='min-h:100vh bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed bg:scroll@lg'
-    style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section2/section2_bg.png'})`}}
-    >
+    <div className='min-h:100vh bg:#18517e rel'>
+      <div
+        className='inset:0 abs  bg:center bg:no-repeat bg:cover  bg:scroll@lg z:0  hidden@lg'
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section2/section2_bg.png'})`}}
+        data-aos="fade" data-aos-duration="1500"
+      ></div>
+      <div
+        className='inset:0 abs  bg:center bg:no-repeat bg:cover bg:scroll@lg z:0  hidden block@lg'
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section2/section2_bg_pc.jpg'})`}}
+        data-aos="fade" data-aos-duration="1500"
+      ></div>
       <div className='flex flex:col jc:center w:60% mx:auto pt:30% rel z:1 f:white pt:10%@lg w:1/2@lg '>
         <div className='w:full center mb:20 w:20%@lg w:50%@sm' 
           data-aos="fade" data-aos-duration="1500" >

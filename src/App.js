@@ -11,7 +11,11 @@ import Section6 from "./Section6";
 
 function App() {
   useEffect(() => {
-    AOS.init();
+    setTimeout(function() {
+      AOS.init({
+        
+      });
+  }, 100);
     AOS.refresh();
   }, []);
   return (

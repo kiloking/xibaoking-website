@@ -15,9 +15,19 @@ function Section1() {
     nextArrow: <SampleNextArrow />
   };
   return (
-    <div className='min-h:100vh rel bg:beryl-14 bg:center bg:no-repeat bg:cover bg:fixed bg:scroll@lg'
-    style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section1/section1_bg.png'})`}}
+    <div className='min-h:100vh rel bg:#261613'
+    
     >
+      <div
+        className='inset:0 abs  bg:center bg:no-repeat bg:cover  bg:scroll@lg z:0  hidden@lg'
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section1/section1_bg.png'})`}}
+        data-aos="fade" data-aos-duration="1500"
+      ></div>
+      <div
+        className='inset:0 abs  bg:center bg:no-repeat bg:cover bg:scroll@lg z:0 hidden block@lg'
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section1/section1_bg_pc.jpg'})`}}
+        data-aos="fade" data-aos-duration="1500"
+      ></div>
     <div className='flex flex:col jc:center w:80% mx:auto pt:30% rel z:1 pt:10%@lg w:20%@lg w:50%@sm'>
       <div className='w:3/4 center mb:20' 
         data-aos="fade" data-aos-duration="1500" >
