@@ -15,35 +15,35 @@ function Section4() {
     nextArrow: <SampleNextArrow />
   };
   return (
-    <div className='min-h:100vh bg:#070302 rel'>
+    <div className='min-h-screen bg-[#070302] relative'>
       <div
-        className='inset:0 abs  bg:center bg:no-repeat bg:cover  bg:scroll@md z:0  hidden@md'
+        className='inset-0 absolute  bg-center bg-no-repeat bg-cover  lg:bg-scroll z-0  lg:hidden'
         style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section4/section4_bg.png'})`}}
         data-aos="fade" data-aos-duration="1500"
       ></div>
       <div
-        className='inset:0 abs  bg:center bg:no-repeat bg:cover bg:scroll@md z:0  hidden block@md'
+        className='inset-0 absolute  bg-center bg-no-repeat bg-cover lg:bg-scroll z-0  hidden lg:block'
         style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section4/section4_bg_pc.jpg'})`}}
         data-aos="fade" data-aos-duration="1500"
       ></div>
-      <div className='flex flex:col jc:center w:80% mx:auto pt:20% rel z:1  pt:5%@sm'>
-        <div className='w:full center mb:15 w:30%@md w:80%@sm' 
+      <div className='flex flex-col justify-center w-[80%] mx-auto pt-[20%] relative z-10  sm:pt-[5%]'>
+        <div className='w-full center mb-15 lg:w-[30%] sm:w-[80%]' 
           data-aos="fade" data-aos-duration="1500" >
-            <img src={process.env.PUBLIC_URL+'/images/section4/logo.png'} alt="" className='w:full'/> 
+            <img src={process.env.PUBLIC_URL+'/images/section4/logo.png'} alt="" className='w-full'/> 
         </div>   
-        <div className='flex flex:col flex:row@md ai:center@md jc:center@md  '>
-          <div className='w:full center mb:15 w:1/2@md pt:5%@md w:80%@sm pt:5%@sm' 
+        <div className='flex flex-col lg:flex-row lg:items-center  justify-center gap-5  '>
+          <div className='w-full mx-auto mb-15 lg:w-1/2 lg:pt-[5%] sm:w-[80%] sm:pt-[5%]' 
             data-aos="fade" data-aos-duration="1500" >
-              <img src={process.env.PUBLIC_URL+'/images/section4/block.png'} alt="" className='w:full w:1/2@md mx:auto@md'/> 
+              <img src={process.env.PUBLIC_URL+'/images/section4/block.png'} alt="" className='w-full w-1/2@md mx-auto@md'/> 
           </div>
-          <div className='w:full center mb:10 pt:5% w:1/2@md pb:80@sm' 
+          <div className='w-full mx-auto mb-10 pt-[5%] lg:w-1/2 sm:pb-12' 
             data-aos="fade" data-aos-duration="1500" >
             <Slider {...settings} >
               {
                 data.map((item,index)=>{
                   return(
-                    <div key={index} className='rel w:full '>
-                        <img src={process.env.PUBLIC_URL +'/images/section4/'+item} alt="" className='w:full'/>
+                    <div key={index} className='rel w-full '>
+                        <img src={process.env.PUBLIC_URL +'/images/section4/'+item} alt="" className='w-full'/>
                     </div>
                   )
                 })
