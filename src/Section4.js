@@ -27,11 +27,11 @@ function Section4() {
         data-aos="fade" data-aos-duration="1500"
       ></div>
       <div className='flex flex-col justify-center w-[80%] mx-auto pt-[20%] relative z-10  sm:pt-[5%]'>
-        <div className='w-full center mb-15 lg:w-[30%] sm:w-[80%]' 
+        <div className='w-full mx-auto mb-15 lg:w-[30%] sm:w-[80%]' 
           data-aos="fade" data-aos-duration="1500" >
             <img src={process.env.PUBLIC_URL+'/images/section4/logo.png'} alt="" className='w-full'/> 
         </div>   
-        <div className='flex flex-col lg:flex-row lg:items-center  justify-center gap-5  '>
+        <div className='flex flex-col lg:flex-row lg:items-center  justify-center gap-16  '>
           <div className='w-full mx-auto mb-15 lg:w-1/2 lg:pt-[5%] sm:w-[80%] sm:pt-[5%]' 
             data-aos="fade" data-aos-duration="1500" >
               <img src={process.env.PUBLIC_URL+'/images/section4/block.png'} alt="" className='w-full w-1/2@md mx-auto@md'/> 
