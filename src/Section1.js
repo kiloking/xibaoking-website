@@ -19,7 +19,7 @@ function Section1() {
     
     >
       <div
-        className='inset-0 absolute  bg-center bg-no-repeat bg-cover  lg:bg-scroll z-0  lg:hidden'
+        className='inset-0 absolute  bg-top bg-no-repeat bg-[length:100%_100%] md:bg-cover  lg:bg-scroll z-0  lg:hidden'
         style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/section1/section1_bg.png'})`}}
         data-aos="fade" data-aos-duration="1500"
       ></div>
