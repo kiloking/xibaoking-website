@@ -25,14 +25,14 @@ function Section6() {
 
   const onSubmit = data => {
     console.log(data)
-    axios.post('https://sheet.best/api/sheets/63ce9bb5-7af0-4e09-99aa-22511e62f631/xibaoking', data)
+    axios.post('https://sheet.best/api/sheets/63ce9bb5-7af0-4e09-99aa-22511e62f631/tabs/xibaoking', data)
     .then(response => {
       console.log(response);
       sendFormStatusModal()
     })
     .catch(err=>{
       console.log(err)
-    }
+    })
   };
   return (
     <div className='min-h-screen bg-[#110807] relative'>
