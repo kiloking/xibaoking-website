@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CI: false
+      REACT_APP_YOUR_SERVICE_ID: ${{ secrets.YOUR_SERVICE_ID }}
+      REACT_APP_YOUR_TEMPLATE_ID: ${{secrets.YOUR_TEMPLATE_ID }}
+      REACT_APP_YOUR_PUBLIC_KEY: ${{ secrets.YOUR_PUBLIC_KEY }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
