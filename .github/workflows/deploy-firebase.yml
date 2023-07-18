@@ -14,22 +14,35 @@ jobs:
       REACT_APP_YOUR_PUBLIC_KEY: ${{ secrets.YOUR_PUBLIC_KEY }}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+        uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
         with:
-          node-version: 16
-          cache: 'yarn'
+          node-version: 14.x
       - name: Install and build
         run: |
-          yarn install --frozen-lockfile
-          yarn build
+          npm install
+          npm run build
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
           name: node-build
           path: build
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Download builds
+        uses: actions/download-artifact@v2
+        with:
+          name: node-build
+          path: build
       - name: Deploy to Firebase
-        uses: docker://w9jds/firebase-action:master
+        uses: w9jds/firebase-action@master
         with:
           args: deploy -P ${{ secrets.FIREBASE_PROJECT }} --only hosting,functions:host
         env:
