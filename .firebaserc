@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "web-xibaoking",
-    "staging": "web-xibaoking"
+    "default": "web-xibaoking"
   },
   "targets": {},
   "etags": {}
