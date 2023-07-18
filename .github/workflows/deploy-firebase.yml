@@ -42,8 +42,8 @@ jobs:
           name: node-build
           path: build
       - name: Deploy to Firebase
-        uses: docker://w9jds/firebase-action:master
+        uses: w9jds/firebase-action@master
         with:
-          args: deploy -P ${{ secrets.FIREBASE_PROJECT }} --only hosting,functions:host
+          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
