@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React,{useState,useRef} from 'react'
 import { useForm, reset } from "react-hook-form";
 import axios from 'axios';
 import { MdClear } from "react-icons/md";
+import emailjs from '@emailjs/browser';
 function Section6() {
-  const { register, handleSubmit } = useForm({
+  const service_id = process.env.REACT_APP_YOUR_SERVICE_ID
+  const template_id = process.env.REACT_APP_YOUR_TEMPLATE_ID
+  const public_id = process.env.REACT_APP_YOUR_PUBLIC_KEY
+  const { register, handleSubmit, formState:{ errors },reset } = useForm({
     defaultValues: {
       name: "",
       tel: "",
@@ -11,6 +15,7 @@ function Section6() {
     }
   });
   const [formStatus , setFormStatus] = useState(false)
+  const [isSubmitting ,setIsSubmitting]= useState(false)
   const sendFormStatusModal = ()=>{
     setFormStatus(true)
 
@@ -18,6 +23,27 @@ function Section6() {
       setFormStatus(false)
     },5000)
   }
+  const form = useRef();
+  const sendEmail = (e) => {
+    // e.preventDefault();
+    // console.log(form.current)
+    if (isSubmitting) {
+      return;
+    }
+    setIsSubmitting(true);
+    emailjs.sendForm(service_id, template_id, form.current, public_id)
+      .then((result) => {
+          console.log(result.text);
+          if(result.text === 'OK'){
+            sendFormStatusModal()
+            reset()
+          }
+          setIsSubmitting(false);
+      }, (error) => {
+          console.log(error.text);
+          setIsSubmitting(false);
+      });
+  };
   //Main: https://sheet.best/api/sheets/b6059729-a36d-40c1-8fcb-8e8f75e4fdd7
   //TEST: https://sheet.best/api/sheets/c045db18-f183-40d4-8e7f-ac7f53cb603f
   //https://sheet.best/api/sheets/85ea31ab-db3e-4047-a5be-431b5feb08b8
@@ -81,7 +107,7 @@ function Section6() {
         
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="w-[70%] mx-auto pb-20 lg:w-[40%] sm:w-[40%] relative" data-aos="fade-up" data-aos-duration="1500" >
+      <form onSubmit={handleSubmit(sendEmail)} className="w-[70%] mx-auto pb-20 lg:w-[40%] sm:w-[40%] relative" data-aos="fade-up" data-aos-duration="1500" ref={form}>
         <div className='w-full flex items-center my-5   md:flex-col md:items-start justify-between '>
           <label htmlFor="" className='text-[#F8C785] font-bold '>姓名/</label>
           <input type="text" className="block  bg-white ml-3 lg:ml-0 rounded-sm  md:w-full
@@ -102,7 +128,7 @@ function Section6() {
           <input type="text" className="block  bg-white ml-3 lg:ml-0 rounded-sm  md:w-full
                px-3 py-4 " placeholder="預約訊息"    {...register("msg")}/>
         </div>
-        <button className='bg-[#F8C785] px-4 py-6 rounded-sm  font-bold w-full text-base text-[#3A270D]' type='submit'>送出表單</button>
+        <button className='bg-[#F8C785] px-4 py-6 rounded-sm  font-bold w-full text-base text-[#3A270D]' type='submit' disabled={isSubmitting}>送出表單</button>
       </form>
 
     </div>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fullpage/react-fullpage": "^0.1.26",
     "@master/css": "^1.35.8",
     "@master/normal.css": "^1.9.5",
